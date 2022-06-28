@@ -1,0 +1,22 @@
+<% include ../partials/header.ejs %>
+    <div class="alert alert-primary" role="alert">
+        <h4 class="alert-heading text-center">Crear nuevo libro</h4>
+    </div>
+
+    <!-- el formulario se envía a la ruta de los libros ya que en ella se procesara, es importante si el formulario tiene un campo de archivo que tenga la propiedad enctype="multipart/form-data" ya que si no procesara la carga del archivo -->
+    <form method="post" action="/libros" enctype="multipart/form-data">  
+
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" class="form-control" type="text" name="nombre">
+        </div>
+
+        <div class="form-group">
+            <label for="archivo">Imagen</label>
+            <input id="archivo" class="form-control-file" type="file" name="archivo">
+        </div>
+
+        <button class="btn btn-primary" type="submit">Guardar</button>
+
+    </form>
+<% include ../partials/header.ejs %>
