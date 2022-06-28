@@ -72,7 +72,8 @@ module.exports = {
 
         //res.redirect('/libros');
 
-        if(req.file.filename){
+        if(req.file){
+            if(req.file.filename){
 
                 libro.retornarDatosID(conexion, req.body.id, function(err, registros){
 
@@ -91,3 +92,4 @@ module.exports = {
         }
 
     }
+}
